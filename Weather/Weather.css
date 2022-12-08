@@ -1,0 +1,143 @@
+*{
+    letter-spacing: 2px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0px;
+}
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    --color1: #F7F7F7;
+    --shadowColor1: 0px 0px 30px var(--color1);
+    --color2: #F2E7D5;
+    --shadowColor2: 0px 0px 30px var(--color2);
+    --color3: #6D9886;
+    --shadowColor3: 0px 0px 30px var(--color3);
+    --color4: #393E46;
+    --shadowColor4: 0px 0px 30px var(--color4);
+
+    --shadow1: 0px 0px 20px rgba(34, 34, 34, 0.2);
+    --shadow2: 0px 0px 10px rgba(34, 34, 34, 0.2);
+    color: var(--color4 );
+    background: linear-gradient(-45deg, var(--color3), var(--color1));
+}
+.mainBoard{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.mainWeather {
+    padding: 1.5%;
+    background-color: var(--color1);
+    border-radius: 10px;
+    box-shadow: var(--shadow1);
+    min-height: 60%;
+    height: 60%;
+    min-width: 25%;
+    overflow: hidden;
+}
+.titleHeading{
+    position: relative;
+    flex-direction: column;
+    font-size: 20px;
+    margin: 0;
+    height: 20%;
+    width: 100%;
+}
+.firstLineTitle, .secoundLineTitle{
+    color: var(--color4);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 0;
+    width: 100%;
+}
+.firstLineTitle{
+    align-items: flex-end;
+    font-size: 40px;
+    height: 70%;
+}
+.firstLineTitle:after {
+    position: absolute;
+    content: "";
+    width: 25%;
+    border-bottom: 2px solid var(--color3);
+}
+.secoundLineTitle{
+    align-items: flex-start;
+    font-size: 22px;
+    height: 40%;
+}
+.screenDisplayIcon{
+    padding: 3% 0%;
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+.cityBackground{
+    display: flex;
+    align-items: center;
+    letter-spacing: 10px;
+    justify-content: center ;
+    top: 25%;
+    width: 100%;
+    position: absolute;
+    font-size: 125px;
+    font-weight: 800;
+    opacity: 10%;
+}
+.screenDisplay{
+    margin: 0;
+}
+.iconInformation{
+    display: flex;
+    justify-content: flex-end;
+    right: 0;
+    width: 100%;
+    position: absolute;
+}
+.screenDisplayTitle{
+    color: var(--color3);
+    display: flex;
+    align-items: flex-end;
+    font-size: 25px;
+    position: relative;
+    height: 10%;
+    width: 100%;
+    margin: 0;
+}
+.screenDisplayTitle:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 25%;
+    border-bottom: 2px solid var(--color3);
+}
+.iconWeather{
+    position: relative;
+    height: 90%;
+}
+
+.informationLocation{
+    margin: 0;
+    margin-left: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: var(--color1);
+    box-shadow: var(--shadow2);
+    border-radius: 5px;
+}
+.fieldsTransformData{
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+

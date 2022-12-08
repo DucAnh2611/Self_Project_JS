@@ -1,0 +1,250 @@
+*{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    
+}
+body {
+    background-color: rgba(49, 16, 80, 0.165);
+}
+.ranks {
+    color: black;
+    background-color: white;
+}
+
+.mainBoard {
+    height: 970px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.mainFormAndDB {
+    border-radius: 15px;
+    height: 600px;
+    width: 600px;
+    padding: 4%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.124);
+}
+.titleOpening{
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.newToDoThing {
+    width: 100%;
+    display: inline-block;
+}
+
+.openingPart {
+    align-items: center;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+}
+.newToDoThing {
+    height: 20%;
+} 
+.titleForm{
+    height: 30%;
+}
+.informationThing {
+    height: 40%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+.nameToDoThing, .rateSelect{
+    display: flex;
+    height: 80%;
+    width: 50%;
+    padding: 0;
+} 
+.nameThingInput, .selectRank{
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid blueviolet;
+    padding: 5px 15px;
+    width: 80%;
+    transition-duration: 0.5s;
+}
+.nameThingInput[type=text]:focus {
+    background-color: #E5B8F4;
+  }
+.selectRank:focus{
+    border: 3px solid blueviolet;
+}
+.selectRank{
+    width: 100%;
+}
+
+.submitButton{
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 50px;
+    float: right;
+    background-color: #810CA8;
+    color: white;
+    font-size: 15px;
+    height: 30%;
+    width: 20%;
+    transition-duration: 0.3s;
+}
+.submitButton:hover {
+    cursor: pointer;
+    color: #810CA8;
+    background-color: #FFBF00  ;
+}
+.databaseListThing{
+    height: 60%;
+    max-height: 70%;
+}
+.titleDatabase {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    height: 10%
+}
+.tableHeader{
+    display: flex;
+    height: 10%;
+    border-bottom:3px solid blueviolet;
+    padding: 0px 2%;
+}
+.tableThing{
+    height: 90%;
+}
+.fieldDisplayDiv{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    border-radius: 3px ;
+    transition-duration: 0.3s;
+}
+.fieldDisplayDiv:hover{
+    cursor: pointer;
+    background-color: #E5B8F4;
+}
+.tableHolder {
+    border-bottom:1px solid blueviolet;
+    margin-top: 1%;
+    padding: 1% 2%;
+    overflow-y: scroll;
+    height: 85%;
+}
+
+.tableHolder::-webkit-scrollbar {
+    margin-right: 10px;
+    width: 7px;
+}
+
+.tableHolder::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #E5B8F4;
+}
+
+.tableHolder::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: #810CA8;
+}
+
+.divThing {
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: white;
+    min-height: 60px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition-duration: 0.3s;
+}
+.nothingInList {
+    height: 100%;
+    width: 100%;
+    color: gray;
+    text-align: center;
+}
+.divThing:hover {
+    transform:translateY(-3px);
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.2);
+}
+.ThingDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    max-width: 20%;
+    height: fit-content;
+}
+.nameThingDB {
+    text-align: center;
+    overflow: hidden;
+    padding: 1% 10%;
+    max-width: 100%;
+}
+.imgFix, .imgRemove{
+    width: 15px;
+}
+.filerIcon {
+    width: 20px;
+}
+.filerIcon:hover, .imgFix:hover, .imgRemove:hover {
+    cursor: pointer;
+}
+.Low{
+    background-color: #F0CAA3;
+}
+.Middle{
+    background-color: #FFBF00;
+}
+.High{
+    background-color: #FF7000;
+}
+.Extreme{
+    background-color: #C147E9;
+}
+
+.checkBoxDone{
+    height: 20px;
+    width: 20px;
+
+    border: 3px solid blueviolet;
+}
+
+.Done {
+    background-color:lime;
+}
+.clearListDiv{
+    margin-top: 1%;
+    display: flex;
+    height: 13%;
+    justify-content:flex-end;
+    align-items: flex-end;
+}
+
+.clearList{
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 50px;
+    float: right;
+    background-color: #810CA8;
+    color: white;
+    font-size: 15px;
+    height: 80%;
+    width: 20%;
+    transition-duration: 0.3s;
+}
+.clearList:hover {
+    cursor: pointer;
+    color: #810CA8;
+    background-color: #FFBF00  ;
+}

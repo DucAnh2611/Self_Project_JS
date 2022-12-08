@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./Calculator.css">
+        <script src="./Calculator.js"></script>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <div class="mainBoard">
+            <div class="mainCalculator">
+                <div class="screenCalculator">
+                    <p class="resultCalculator">0</p>
+                    <span class="hoverResultBox">
+                        <div class="result NumberOne">
+                            <p class="labelResult FirstNumber">1st Number</p>
+                            <input class="resultFirstNumber canChangeInput" type="number" value="0">
+                        </div>
+                        <div class="result Method">
+                            <p class="labelResult Method">Method</p>
+                            <select class="resultMethod canChangeInput">
+                                <option class="resultMethodChange" value="+">+</option>
+                                <option class="resultMethodChange" value="-">-</option>
+                                <option class="resultMethodChange" value="*">*</option>
+                                <option class="resultMethodChange" value="/">/</option>
+                            </select>
+                        </div>
+                        <div class="result NumberTwo">
+                            <p class="labelResult SecoundNumber">2nd Number</p>
+                            <input class="resultSecoundNumber canChangeInput" type="number" value="0">
+                        </div>
+                    </span>
+                    <span class="methodFloating">
+                        <p class="methodFloatingSelection">+</p>
+                        <p class="methodFloatingSelection">-</p>
+                        <p class="methodFloatingSelection">*</p>
+                        <p class="methodFloatingSelection">/</p>
+                    </span>
+                    <button class="clearData">C</button>
+                    <button class="clearDataAll">AC</button>
+                </div>
+                <div class="buttonsData">
+                    <div class="buttonNumber">
+                        <button class="number">1</button>
+                        <button class="number">2</button>
+                        <button class="number">3</button>
+                        <button class="number">4</button>
+                        <button class="number">5</button>
+                        <button class="number">6</button>
+                        <button class="number">7</button>
+                        <button class="number">8</button>
+                        <button class="number">9</button>
+                        <button class="number">.</button>
+                        <button class="number">0</button>
+                        <button class="calculator">=</button>                    
+                    </div>
+                    <div class="methodCalculateNumber">
+                        <button class="methodCalculate">+</button>
+                        <button class="methodCalculate">-</button>
+                        <button class="methodCalculate">*</button>
+                        <button class="methodCalculate">/</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="historyCalculate">
+                <div class="themePick">
+                    <Label class="labelTheme">Dark</Label>
+                    <div class="toggleSwitchTheme">
+                        <input type="checkbox" class="toggleMain">
+                        <span class="toggleChange"></span>
+                    </div>
+                    <Label class="labelTheme">Light</Label>
+                </div>
+                <div class="divHistoryDatas">
+                <h1 class="titleHistory">History</h1>
+                <div class="historyDatas">
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

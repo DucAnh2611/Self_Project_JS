@@ -1,0 +1,207 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+    margin: 0;
+    color: #093637;
+    --background: linear-gradient(135deg, #44a08d, #093637);
+    --shadow: 0px 0px 20px rgba(34, 34, 34, 0.3);
+    --shadow2: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    --shadow3: 0px 0px 15px #093637;
+    background: linear-gradient(135deg, #73c8a9, #373b44);;
+}
+.mainBoard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.mainToggle{
+    color: white;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.ourPricing{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 50%;
+    width: 100%;
+    text-align:center;
+    margin: 0;
+    font-size: 45px;
+}   
+.toggleBoard{
+    margin-top: 10px;
+    font-size: 20px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.annually, .monthly{
+    font-weight: 400;
+    font-size: 20px;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+    width: 100px;
+}
+.annually{
+    justify-content: flex-end;
+}
+.monthly {
+    justify-content: flex-start;
+}
+.toggleSwitchLabel{
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    width: 80px;
+}
+.toggleSwitch{
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+}
+.toggleSlider:before {  
+    content: "";
+    top: 24.3%;
+    left: 12%;
+    border-radius: 50px;
+    position:absolute;
+    background-color: white;
+    height: 50%;
+    width: 25%;
+    transition-duration: 0.5s;
+
+}
+.toggleSlider{
+    border-radius: 50px;
+    position: absolute;
+    background-color: #6ECCAF;
+    height: 100%;
+    width: 100%;
+    transition-duration: 0.5s;
+}
+.toggleSwitch:checked + .toggleSlider{
+    background-color: #093637;
+    box-shadow: var(--shadow3);
+}
+.toggleSwitch:checked + .toggleSlider:before{    
+    position:absolute;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+    left: 58%;
+}
+
+.mainPricingCompo{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.priceComponent {
+    padding: 2%;
+    border-radius: 10px;
+    margin: 0.6%;
+    height: 80%;
+    width: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: var(--shadow);
+    transition-duration: 0.5s;
+    z-index: 0;
+}
+.priceComponent:hover{
+    z-index: 1;
+    border-radius: 10px;
+    color: white;
+    transform: scale(1.1);
+    background: var(--background);
+
+}
+.priceComponent:hover .learnMoreButton{
+    color: #093637;
+    background: white;
+}
+.priceComponent:hover .informationPacket,.priceComponent:hover .typeAndPrice {
+    border-bottom: 0.5px solid white;
+}
+.typeAndPrice{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.5px solid #44a08d;
+}
+.typePacket, .pricePacket{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+.typePacket{
+    font-size: 16px;
+    font-weight: bold;
+    height: 30%;
+}
+
+.pricePacket{
+    height: 80%;
+    font-size: 60px;
+}
+.informationPacket{
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    height: 13%;
+    border-bottom: 0.5px solid #44a08d;
+}
+.buttonLearnMoreDiv{
+    width: 100%;
+    height: 21%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.learnMoreButton{
+    letter-spacing: 2px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 55%;
+    background: var(--background);
+    transition-duration: 0.5s;
+}
+.learnMoreButton:hover {
+    letter-spacing: 5px;
+    cursor: pointer;
+    transform: translateY(-7px);
+    box-shadow: var(--shadow2);
+    color: #093637;
+}

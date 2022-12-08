@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./toDoList.css">
+    <link rel="icon" type="image/x-icon" href="./to-do-list.png">
+    <script src="./toDoList.js"></script>
+    <title>TO DO LIST</title>
+</head>
+<body>
+    <div class="mainBoard">
+        <div class="mainFormAndDB">
+            <div class="openingPart">
+                <h1 class="titleOpening">TO DO LIST</h1>
+            </div>
+            <div class="newToDoThing" >
+                <div class="titleForm">
+                    <h2 class="titleFormText">Add thing</h1>
+                </div>
+                <div class="informationThing">
+                    <div class="nameToDoThing">
+                        <input class="nameThingInput " name="nameThing" type="text" placeholder="Type your thing need to do">
+                    </div>
+                    <div class="rateSelect">
+                        <select name="ranksThing" class="selectRank">
+                            <option value="default" selected disabled hidden>Select rank</option>
+                            <option class="ranks" value="Low" >Low</option>
+                            <option class="ranks" value="Middle" >Middle</option>
+                            <option class="ranks" value="High" >High</option>
+                            <option class="ranks" value="Extreme" >Extreme</option>
+                        </select>
+                    </div>
+                </div>
+                <input class="submitButton" name="submitButton" type="submit" value="Submit">
+            </div>
+            <div class="databaseListThing">
+                <div class="titleDatabase">
+                    <h2 class="titleDatabaseText">List thing</h1>
+                    <img class="filerIcon" src="./filter-solid.svg">
+                </div>
+                <div class="tableThing">
+                    <div class="tableHeader">
+                        <div class="fieldDisplayDiv">
+                            <p class="fieldDisplay">Name</p>
+                        </div>
+                        <div class="fieldDisplayDiv">
+                            <p class="fieldDisplay">Rate</p>
+                        </div>
+                        <div class="fieldDisplayDiv">
+                            <p class="fieldDisplay">Change</p>
+                        </div>
+                        <div class="fieldDisplayDiv">
+                            <p class="fieldDisplay">Remove</p>
+                        </div>
+                        <div class="fieldDisplayDiv">
+                            <p class="fieldDisplay">Done</p>
+                        </div>
+                    </div>
+                    <div class="tableHolder">
+                        <p class="nothingInList" >There's nothing in list</p>
+                    </div>
+                </div>
+                <div class="clearListDiv">
+                    <button class="clearList">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
