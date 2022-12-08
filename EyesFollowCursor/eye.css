@@ -2,14 +2,9 @@
     letter-spacing: 2px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    transition-duration: 0.1s;
 }
-html{
-    height: 100%;
-}
-
-body{
-    height: 100%;
-    margin: 0;
+:root {
     --color1: #F3EFE0;
     --shadowColor1: 0px 0px 30px var(--color1);
     --color2: #434242;
@@ -20,10 +15,17 @@ body{
     --shadowColor4: 0px 0px 30px var(--color4);
 
     --shadow1: 0px 0px 30px rgba(34, 34, 34, 1);
+}
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    margin: 0;
     background-color: var(--color3);
     color: var(--color1);
     overflow: hidden;
-    cursor:none;
 }
 .mainBoard {
     height: 100%;
@@ -82,7 +84,6 @@ body{
     width: 40%;
     border-radius: 50px;
     border: 5px solid var(--color4);
-    box-shadow: var(--shadow1);
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -126,10 +127,66 @@ body{
 .bottom{
     bottom: 0;
 }
-.cursorImg{
-    z-index: 3;
-    max-width: 25px;
+.toggleChangeThemeMain {
+    letter-spacing: 0;
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    top: 7%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    transition-duration: 0.05s;
+    height: 10%;
+    width: 10%;
+}
+
+.toggleChangeTheme{
+    position: relative;
+    display:inline-block;
+    width: 35%;
+    height: 30%;
+    overflow: hidden;
+    border-radius: 50vh;
+}
+.toggleCheckBox{
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+.toggle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color4);
+}
+.toggle:before {
+    position: absolute;
+    content: "";
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50vh;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color1);
+    transition-duration: 1s;
+}
+.makeMoon{
+    position: absolute;
+    height: 2vh;
+    width: 2vh;
+    border-radius: 50vh;
+    top: 30%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    background-color: var(--color4);
+}
+.toggleCheckBox:checked + .toggle:before {
+    left: 75%;
+}
+.toggleCheckBox:checked + .makeMoon {
+    left: 10%;
 }

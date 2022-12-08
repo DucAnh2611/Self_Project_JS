@@ -25,15 +25,12 @@ window.onload = () => {
                 item.style.left = (50 + Math.round((xMouse - (windowWidth-  itemParentSideX))/itemParentSideX *100)/2).toString() +"%"; 
             }
         })
-        var clickMouse = document.querySelector(".cursorImg")
-        clickMouse.style.visibility = "visible";
-        clickMouse.style.left = Math.round((xMouse/windowWidth)*100).toString() + "%";
-        clickMouse.style.top = Math.round((yMouse/windowHeight)*100).toString() + "%";
+
     });
     let topEyeBlink = document.querySelectorAll(".top");
     let bottomEyeBlink = document.querySelectorAll(".bottom");
 
-    let timeRandomBlink = 2000 - Math.round(Math.random()*200);
+    let timeRandomBlink = 2000;
     let timeReset = 200;
 
     let resetBlinkEyes = setInterval(()=> {
@@ -48,7 +45,6 @@ window.onload = () => {
             item.style.height = "50%";
         })
         resetBlinkEyes;
-        timeRandomBlink = 2000 - Math.round(Math.random()*200);
     }, timeRandomBlink);
     blinkEyes;
 
@@ -58,8 +54,6 @@ window.onload = () => {
         let minutesNow = todayDate.getMinutes();
         let secoundsNow = todayDate.getSeconds();
         
-        console.log(hoursNow, minutesNow, secoundsNow);
-
         document.querySelector(".hoursTimer").innerHTML = smtLessThan10(hoursNow);
         document.querySelector(".minutesTimer").innerHTML = smtLessThan10(minutesNow);
         document.querySelector(".secoundsTimer"). innerHTML = smtLessThan10(secoundsNow);
@@ -69,6 +63,18 @@ window.onload = () => {
         document.querySelector(".yearsTimer").innerHTML = '<p class = "noneTitle" >Năm  <p>' + smtLessThan10(todayDate.getFullYear());
 
     } , 1000);
+
+    let getTheme = document.querySelector(".toggleCheckBox");
+    let changeColor = ["#2B3A55", "#CE7777", "#E8C4C4", "#F2E5E5"];
+    getTheme.addEventListener("click",() => {
+        let root = document.documentElement;
+        let nowColor = [];
+        for(let i =1; i<=4;i++) {
+            nowColor.push(getComputedStyle(root).getPropertyValue("--color" + i.toString()));
+            root.style.setProperty("--color"+i.toString(), changeColor[i-1]);
+        }
+        changeColor = nowColor;
+    })
 }
 function smtLessThan10(data) {
     if(data< 10) {
