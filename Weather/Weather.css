@@ -18,8 +18,8 @@ body{
     --color4: #393E46;
     --shadowColor4: 0px 0px 30px var(--color4);
 
-    --shadow1: 0px 0px 20px rgba(34, 34, 34, 0.2);
-    --shadow2: 0px 0px 10px rgba(34, 34, 34, 0.2);
+    --shadow1: 0px 0px 20px rgba(34, 34, 34, 0.4);
+    --shadow2: 0px 0px 10px rgba(34, 34, 34, 0.4);
     color: var(--color4 );
     background: linear-gradient(-45deg, var(--color3), var(--color1));
 }
@@ -131,7 +131,9 @@ body{
     justify-content: center;
     height: 50px;
     width: 50px;
-    background-color: var(--color1);
+    color: #F7F7F7;
+    font-weight: bold;
+    background-color: var(--color4);
     box-shadow: var(--shadow2);
     border-radius: 5px;
 }
